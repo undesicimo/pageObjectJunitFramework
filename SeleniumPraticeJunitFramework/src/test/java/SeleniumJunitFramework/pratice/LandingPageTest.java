@@ -3,7 +3,6 @@ package SeleniumJunitFramework.pratice;
 
 
 import org.junit.Assert;
-import org.junit.jupiter.api.Test;
 
 import SeleniumJunitFramework.pratice.PageObjects.AdminPage;
 import SeleniumJunitFramework.pratice.PageObjects.LandingPage;
