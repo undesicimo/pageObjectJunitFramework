@@ -1,4 +1,4 @@
-package SeleniumJunitFramework.pratice.StepDefenitions;
+package SeleniumJunitFramework.pratice.StepDefinitions;
 
 import org.junit.Assert;
 
