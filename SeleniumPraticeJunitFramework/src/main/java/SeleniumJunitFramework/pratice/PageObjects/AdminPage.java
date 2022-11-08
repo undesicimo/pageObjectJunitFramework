@@ -13,12 +13,12 @@ public class AdminPage {
         PageFactory.initElements(driver, this);
     }
     @FindBy(css=".oxd-topbar-header-breadcrumb-module")
-    WebElement headertitlePIM;
+    WebElement headertitle;
 
     
     public String getHeaderTitle()
     {
-       String headerTitle = headertitlePIM.getText();
+       String headerTitle = headertitle.getText();
        return headerTitle;
     }
 

@@ -1,5 +1,7 @@
 package SeleniumJunitFramework.pratice.PageObjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -12,9 +14,9 @@ public class LandingPage {
         this.driver = driver;
         PageFactory.initElements(driver,this);
     }
-    @FindBy(xpath ="//p[@class='oxd-text oxd-text--p'][1]")
+    @FindBy(css ="p[class='oxd-text oxd-text--p']:nth-child(1)")
     WebElement usernameField;
-    @FindBy(xpath ="//p[@class='oxd-text oxd-text--p'][2]")
+    @FindBy(css ="p[class='oxd-text oxd-text--p']:nth-child(2)")
     WebElement passwordField;
     @FindBy(css="input[name='username']")
     WebElement usernameInput;
@@ -30,6 +32,7 @@ public class LandingPage {
     
     public String getUsername()
     {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         String username = usernameField.getText();
         String[] splitUsername = username.split(":");
         return splitUsername[1];

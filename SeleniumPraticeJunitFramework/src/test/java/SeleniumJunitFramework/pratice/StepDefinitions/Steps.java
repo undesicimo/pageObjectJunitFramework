@@ -39,7 +39,7 @@ public class Steps extends BaseComponents{
     @Then("ログインが成功し、admin画面が表示されて、{string} が表示される")
     public void successful_login_check(String string)
     {
-        Assert.assertEquals(string, adminPage.getHeaderTitle());
+        Assert.assertTrue(string.equalsIgnoreCase(adminPage.getHeaderTitle()));
         System.out.println(adminPage.getHeaderTitle());
     }
 }
