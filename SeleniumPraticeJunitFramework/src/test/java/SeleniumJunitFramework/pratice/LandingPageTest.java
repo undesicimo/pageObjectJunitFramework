@@ -3,6 +3,7 @@ package SeleniumJunitFramework.pratice;
 
 
 import org.junit.Assert;
+import org.junit.jupiter.api.Test;
 
 import SeleniumJunitFramework.pratice.PageObjects.AdminPage;
 import SeleniumJunitFramework.pratice.PageObjects.LandingPage;
@@ -23,7 +24,7 @@ public class LandingPageTest extends BaseComponents{
         //3.[ログイン]ボタンを押下する
         AdminPage adminPage = landingPage.submitLogin();
         //4.通常にログインされているかの確認
-        Assert.assertEquals("PIM", adminPage.getHeaderTitle());
+        Assert.assertTrue("Dashboard".equalsIgnoreCase(adminPage.getHeaderTitle()));
         System.out.println(adminPage.getHeaderTitle());
         
         
